@@ -5,23 +5,21 @@ public class Books {
     private Long id;
     private String title;
     private String author;
-    private String isbn;
-    private int publishedYear;
-    private String category;
+    private int availableCopies;
 
+    // No-argument constructor
     public Books() {
     }
 
-    public Books(Long id, String title, String author, String isbn,
-            int publishedYear, String category) {
+    // Convenience constructor
+    public Books(Long id, String title, String author, int availableCopies) {
         this.id = id;
         this.title = title;
         this.author = author;
-        this.isbn = isbn;
-        this.publishedYear = publishedYear;
-        this.category = category;
+        this.availableCopies = availableCopies;
     }
 
+    // Getters and Setters
     public Long getId() {
         return id;
     }
@@ -46,27 +44,11 @@ public class Books {
         this.author = author;
     }
 
-    public String getIsbn() {
-        return isbn;
+    public int getAvailableCopies() {
+        return availableCopies;
     }
 
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
-    public int getPublishedYear() {
-        return publishedYear;
-    }
-
-    public void setPublishedYear(int publishedYear) {
-        this.publishedYear = publishedYear;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
+    public void setAvailableCopies(int availableCopies) {
+        this.availableCopies = availableCopies;
     }
 }
